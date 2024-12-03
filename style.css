@@ -75,12 +75,12 @@ button:hover {
         flex-direction: column;
     }
     
-    .player-clock {
-        transform: rotate(180deg);
+    #player1 {
+        transform: rotate(180deg) !important;
     }
     
-    .player-clock:first-child {
-        transform: none;
+    #player2 {
+        transform: none !important;
     }
 }
 

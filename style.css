@@ -23,8 +23,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    position: relative;
-    padding-bottom: 120px;
 }
 
 h1 {
@@ -74,19 +72,14 @@ button:hover {
     flex-direction: row;
     gap: 1rem;
     margin: 1.5rem 0;
+    margin-bottom: 6rem;
 }
 
 .control-button {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 2rem;
     width: 100%;
     display: flex;
     justify-content: center;
-    background: linear-gradient(to top, #1a1a1a 80%, transparent);
-    z-index: 100;
+    margin-top: -4rem;
 }
 
 #startBtn {
@@ -95,7 +88,6 @@ button:hover {
     background: #2196F3;
     width: 50%;
     max-width: 200px;
-    margin-bottom: 1rem;
 }
 
 #startBtn:hover {

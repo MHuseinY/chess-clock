@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ساعة شطرنج </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ساعة شطرنج </h1>
+        
+        <div class="settings">
+            <select id="timeSelect">
+                <option value="300">5 دقائق</option>
+                <option value="600">10 دقائق</option>
+                <option value="900">15 دقيقة</option>
+                <option value="1800">30 دقيقة</option>
+            </select>
+            <button id="resetBtn">إعادة ضبط</button>
+        </div>
+
+        <div class="chess-clock">
+            <div class="player-clock" id="player1">
+                <div class="time">05:00</div>
+                <button class="player-btn">اللاعب 1</button>
+            </div>
+            
+            <div class="player-clock" id="player2">
+                <div class="time">05:00</div>
+                <button class="player-btn">اللاعب 2</button>
+            </div>
+        </div>
+
+        <button id="startBtn">ابدأ</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

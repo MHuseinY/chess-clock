@@ -20,6 +20,9 @@ body {
     padding: 1rem;
     width: 100%;
     max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -64,24 +67,38 @@ button:hover {
 }
 
 .chess-clock {
+    flex: 1;
     display: flex;
     flex-direction: row;
     gap: 1rem;
     margin: 1.5rem 0;
 }
 
-@media (max-width: 600px) {
-    .chess-clock {
-        flex-direction: column;
-    }
-    
-    #player1 {
-        transform: rotate(180deg) !important;
-    }
-    
-    #player2 {
-        transform: none !important;
-    }
+.control-button {
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#startBtn {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    padding: 0.8rem 2rem;
+    background: #2196F3;
+    width: 50%;
+    max-width: 200px;
+}
+
+#startBtn:hover {
+    background: #1976D2;
+}
+
+#resetBtn {
+    background: #f44336;
+}
+
+#resetBtn:hover {
+    background: #d32f2f;
 }
 
 .player-clock {
@@ -118,21 +135,16 @@ button:hover {
     cursor: not-allowed;
 }
 
-#startBtn {
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    padding: 0.8rem 2rem;
-    background: #2196F3;
-    margin-top: 1rem;
-}
-
-#startBtn:hover {
-    background: #1976D2;
-}
-
-#resetBtn {
-    background: #f44336;
-}
-
-#resetBtn:hover {
-    background: #d32f2f;
+@media (max-width: 600px) {
+    .chess-clock {
+        flex-direction: column;
+    }
+    
+    #player1 {
+        transform: rotate(180deg) !important;
+    }
+    
+    #player2 {
+        transform: none !important;
+    }
 }

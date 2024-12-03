@@ -43,6 +43,8 @@ class ChessClock {
             this.start();
         } else {
             this.pause();
+            // إظهار الإعدادات عند إيقاف المؤقت
+            document.querySelector('.settings').style.display = 'flex';
         }
     }
 
@@ -51,7 +53,8 @@ class ChessClock {
             this.isRunning = true;
             this.startBtn.textContent = 'إيقاف مؤقت';
             this.enablePlayerButtons();
-            // اختيار لاعب عشوائي فقط إذا لم يكن هناك لاعب نشط
+            // إخفاء الإعدادات عند البدء
+            document.querySelector('.settings').style.display = 'none';
             if (!this.activePlayer) {
                 this.activePlayer = Math.random() < 0.5 ? 1 : 2;
                 this.updateActivePlayer();
